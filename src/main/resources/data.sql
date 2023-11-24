@@ -1,3 +1,17 @@
+CREATE SCHEMA clean_architecture_db;
+CREATE TABLE product (
+    id INT,
+    product_type VARCHAR(50),
+    product_brand VARCHAR(50)
+);
+CREATE TABLE product_template (
+     id INT,
+     name VARCHAR(50)
+);
+CREATE TABLE product_x_product_template (
+     product_id INT,
+     product_template_id INT
+);
 INSERT INTO product(id, product_type, product_brand) VALUES (1, 'LOANS', 'MANGO');
 INSERT INTO product(id, product_type, product_brand) VALUES (4, 'LOANS', 'WELP');
 INSERT INTO product(id, product_type, product_brand) VALUES (2, 'RENO', 'MANGO');
